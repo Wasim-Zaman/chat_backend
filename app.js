@@ -1,12 +1,13 @@
+import path from "path";
+
 import bodyParser from "body-parser";
 import cors from "cors";
 import dotenv from "dotenv";
 import express from "express";
-import path from "path";
 import swaggerUi from "swagger-ui-express";
+
 import connectDatabase from "./config/database.js";
 import swaggerSpec from "./config/swagger.js";
-import messageRoutes from "./routes/message.routes.js";
 import MyError from "./utils/error.js";
 import response from "./utils/response.js";
 
