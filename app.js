@@ -28,7 +28,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use("/uploads", express.static(path.join(path.resolve(), "uploads")));
 
 // API Routes
-app.use("/api/messages", messageRoutes);
 
 // Swagger Documentation
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
