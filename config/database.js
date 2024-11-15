@@ -1,15 +1,15 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 const connectDatabase = async () => {
   try {
     const USER = process.env.MONGO_INITDB_ROOT_USERNAME;
     const PASSWORD = process.env.MONGO_INITDB_ROOT_PASSWORD;
     const connection = await mongoose.connect(
-      `mongodb://${USER}:${PASSWORD}@mongodb:27017/chat-app?authSource=admin`,
-      {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-      }
+      `mongodb://${USER}:${PASSWORD}@mongodb:27017/chat-app?authSource=admin`
+      //   {
+      //     useNewUrlParser: true,
+      //     useUnifiedTopology: true,
+      //   }
     );
 
     console.log(`MongoDB Connected: ${connection.connection.host}`);
@@ -19,4 +19,4 @@ const connectDatabase = async () => {
   }
 };
 
-module.exports = connectDatabase;
+export default connectDatabase;
